@@ -6,7 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ee4902-0740-4967-bf49-cb0c108736e8" name="Default Changelist" comment="" />
+    <list default="true" id="04ee4902-0740-4967-bf49-cb0c108736e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Concesionario.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Concesionario.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/AdminAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/AdminAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/AdminEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/AdminEmpleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/AdminSucursal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/AdminSucursal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Auto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/Sucursal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Sucursal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/main-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/polyfills-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/polyfills-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/polyfills-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/polyfills-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/polyfills-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/polyfills-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/polyfills-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/polyfills-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/runtime-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/runtime-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/runtime-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/runtime-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styles-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styles-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styles-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/styles-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/styles-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor-es5.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modelo/Auto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modelo/Empleado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+            <state relative-caret-position="179">
+              <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modelo/Sucursal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="366">
+              <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controlador/AdminAuto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+            <state relative-caret-position="199">
+              <caret line="216" column="48" selection-start-line="216" selection-start-column="48" selection-end-line="216" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controlador/AdminSucursal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="46" />
+            <state relative-caret-position="145">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="306">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -100,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controlador/AdminEmpleado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-812">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="77">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="100" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,19 +153,23 @@
     </findStrings>
     <replaceStrings>
       <replace>sucursales</replace>
+      <replace>Sucursal</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/modelo/Conexion.java" />
-        <option value="$PROJECT_DIR$/src/modelo/Sucursal.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/controlador/AdminSucursal.java" />
+        <option value="$PROJECT_DIR$/src/modelo/Auto.java" />
         <option value="$PROJECT_DIR$/src/modelo/Empleado.java" />
         <option value="$PROJECT_DIR$/src/controlador/AdminEmpleado.java" />
+        <option value="$PROJECT_DIR$/src/controlador/AdminSucursal.java" />
+        <option value="$PROJECT_DIR$/src/modelo/Sucursal.java" />
         <option value="$PROJECT_DIR$/src/controlador/AdminAuto.java" />
-        <option value="$PROJECT_DIR$/src/modelo/Auto.java" />
         <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
@@ -150,8 +182,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="37" />
-    <option name="y" value="74" />
+    <option name="x" value="22" />
+    <option name="y" value="112" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -161,40 +193,34 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="APIConsecionario-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIConsecionario-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Back-Concesionario" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Back-Concesionario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="APIConsecionario-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIConsecionario-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="APIConsecionario-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIConsecionario-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controlador" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="APIConsecionario-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APIConsecionario-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Back-Concesionario" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Back-Concesionario" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Back-Concesionario" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/servlet-api.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyectos/Biblioteca" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -220,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.92">
+  <component name="RunManager" selected="JBoss Server.JBoss 17.0.1.Final">
     <configuration name="JBoss 17.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 17.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Concesionario" />
       <deployment>
@@ -383,11 +409,12 @@
       <workItem from="1565791737463" duration="14084000" />
       <workItem from="1565874568680" duration="23137000" />
       <workItem from="1565919629573" duration="6866000" />
+      <workItem from="1565962030670" duration="20394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44087000" />
+    <option name="totallyTimeSpent" value="64481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,9 +426,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1812321" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17019667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -411,7 +439,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21265142" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2111293" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42716858" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -449,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Empleado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+        <state relative-caret-position="179">
+          <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -459,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Sucursal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="366">
+          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -469,28 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controlador/AdminSucursal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/AdminEmpleado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-812">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controlador/AdminAuto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="145">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -499,8 +507,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modelo/Auto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlador/AdminEmpleado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controlador/AdminAuto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="216" column="48" selection-start-line="216" selection-start-column="48" selection-end-line="216" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -509,8 +537,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -572,6 +600,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -579,7 +608,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>servlet-api</last-edited>
+          <last-edited>gson-2.6.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

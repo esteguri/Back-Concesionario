@@ -52,6 +52,36 @@ public class Sucursal {
         return consultasAll(SELECT);
     }
 
+    public List<Sucursal> consultarSucursales(){
+        String SELECT = "SELECT * FROM sucursal";
+        return consultasAll(SELECT);
+    }
+
+    public boolean consultar(){
+        String SELECT = "SELECT * FROM `sucursal` WHERE `id`= "+this.id;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(SELECT);
+        if (oConexion.ejecutarConsulta()){
+            try{
+                ResultSet rs = oConexion.getoResultSet();
+                if (rs.next()){
+                    this.nombre = rs.getString(2);
+                    this.descripcion = rs.getString(3);
+                    oConexion.desconectar();
+                    return true;
+                }else{
+                    oConexion.desconectar();
+                    return false;
+                }
+            }catch(Exception e){
+                oConexion.desconectar();
+                System.out.println("ERROR " + e.getMessage());
+                return false;
+            }
+        }
+        return false;
+    }
+
     private List<Sucursal> consultasAll(String SELECT){
         Conexion oConexion = new Conexion();
         oConexion.setSQL(SELECT);
@@ -76,5 +106,26 @@ public class Sucursal {
             }
         }
         return null;
+    }
+
+    public boolean insertar(){
+        String INSERT = "INSERT INTO `sucursal`(`nombre`, `descripcion`) VALUES ('"+this.nombre+"','"+this.descripcion+"')";
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(INSERT);
+        return oConexion.ejecutarSentencia();
+    }
+
+    public boolean actualizar(){
+        String UPDATE= "UPDATE `sucursal` SET `nombre`= '"+this.nombre+"',`descripcion`= '"+this.descripcion+"' WHERE `id`= " + this.id ;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(UPDATE);
+        return oConexion.ejecutarSentencia();
+    }
+
+    public boolean eliminar(){
+        String DELETE= "DELETE FROM sucursal WHERE `id`="+this.id;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(DELETE);
+        return oConexion.ejecutarSentencia();
     }
 }

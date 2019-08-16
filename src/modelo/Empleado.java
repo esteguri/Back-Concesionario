@@ -93,6 +93,35 @@ public class Empleado {
         return consultasAll(SELECT);
     }
 
+    public boolean consultarCedula(){
+        String SELECT = "SELECT * FROM `empleado` WHERE `cedula`= '"+this.cedula+"'";
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(SELECT);
+        if (oConexion.ejecutarConsulta()){
+            try{
+                ResultSet rs = oConexion.getoResultSet();
+                if (rs.next()){
+                    this.id = rs.getInt(1);
+                    this.nombre = rs.getString(2);
+                    this.apellido = rs.getString(3);
+                    this.cedula = rs.getString(4);
+                    this.fecha_ingreso = rs.getString(5);
+                    this.id_sucursal = rs.getInt(6);
+                    oConexion.desconectar();
+                    return true;
+                }else{
+                    oConexion.desconectar();
+                    return false;
+                }
+            }catch(Exception e){
+                oConexion.desconectar();
+                System.out.println("ERROR " + e.getMessage());
+                return false;
+            }
+        }
+        return false;
+    }
+
     public boolean consultar(){
         String SELECT = "SELECT * FROM `empleado` WHERE `id`= "+this.id;
         Conexion oConexion = new Conexion();
@@ -148,5 +177,26 @@ public class Empleado {
             }
         }
         return null;
+    }
+
+    public boolean insertar(){
+        String INSERT = "INSERT INTO `empleado`(`nombre`, `apellido`, `cedula`, `fecha_ingreso`, `id_sucursal`) VALUES ('"+this.nombre+"','"+this.apellido+"','"+this.cedula+"','"+this.fecha_ingreso+"',"+this.id_sucursal+")";
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(INSERT);
+        return oConexion.ejecutarSentencia();
+    }
+
+    public boolean actualizar(){
+        String UPDATE= "UPDATE `empleado` SET `nombre`= '"+this.nombre+"',`apellido`= '"+this.apellido+"',`cedula`= '"+this.cedula+"',`fecha_ingreso`= '"+this.fecha_ingreso+"' ,`id_sucursal`= "+this.id_sucursal+" WHERE `id`= " + this.id ;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(UPDATE);
+        return oConexion.ejecutarSentencia();
+    }
+
+    public boolean eliminar(){
+        String DELETE= "DELETE FROM empleado WHERE `id`="+this.id;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(DELETE);
+        return oConexion.ejecutarSentencia();
     }
 }

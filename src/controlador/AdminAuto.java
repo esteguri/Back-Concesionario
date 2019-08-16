@@ -38,13 +38,6 @@ public class AdminAuto extends HttpServlet {
             marca = null;
             id_empleado = -1;
         }
-        System.out.println(nombre);
-        System.out.println(descripcion);
-        System.out.println(precio);
-        System.out.println(placa);
-        System.out.println(fecha_ingreso);
-        System.out.println(marca);
-        System.out.println(id_empleado);
 
         String json = "null";
         response.setContentType("application/json");
@@ -94,14 +87,6 @@ public class AdminAuto extends HttpServlet {
             marca = null;
             id_empleado = -1;
         }
-        System.out.println(id);
-        System.out.println(nombre);
-        System.out.println(descripcion);
-        System.out.println(precio);
-        System.out.println(placa);
-        System.out.println(fecha_ingreso);
-        System.out.println(marca);
-        System.out.println(id_empleado);
 
         String json = "null";
         response.setContentType("application/json");
@@ -115,10 +100,37 @@ public class AdminAuto extends HttpServlet {
             auto.setFecha_ingreso(fecha_ingreso);
             auto.setMarca(marca);
             auto.setId_empleado(id_empleado);
-            if (auto.insertar()){
+            if (auto.actualizar()){
                 json = "{\"error\":200,\"mensaje\":\"ok\"}";
             }else{
-                json = "{\"error\":500,\"mensaje\":\"Error en la insercion\"}";
+                json = "{\"error\":500,\"mensaje\":\"Error en la actualizacion\"}";
+            }
+        }else{
+            json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
+        }
+        PrintWriter out = response.getWriter();
+        out.println(json);
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        int id;
+        try{
+            id = Integer.parseInt(request.getParameter("id"));
+
+        }catch(Exception e){
+            id=-1;
+        }
+
+        String json = "null";
+        response.setContentType("application/json");
+        if (id!=-1){
+            Auto auto = new Auto();
+            auto.setId(id);
+            if (auto.eliminar()){
+                json = "{\"error\":200,\"mensaje\":\"ok\"}";
+            }else{
+                json = "{\"error\":500,\"mensaje\":\"Error en la eliminacion\"}";
             }
         }else{
             json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
@@ -185,12 +197,31 @@ public class AdminAuto extends HttpServlet {
             json = consultarAuto(id);
         }else if(search!=null && search.equals("autos")){
             json = consultarAutos();
+        }else if(search!=null && search.equals("placa")){
+            String placa;
+            try{
+                placa = request.getParameter("placa");
+            }catch(Exception e){
+                placa = null;
+            }
+
+            json = consultarPlaca(placa);
         } else {
 
             json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
         }
         out.println(json);
 
+    }
+
+    private String consultarPlaca(String placa){
+        Auto auto = new Auto();
+        auto.setPlaca(placa);
+        if (auto.consultarXPlaca()){
+            return new Gson().toJson(auto);
+        }else{
+            return "{\"error\":500,\"mensaje\":\"No existe\"}";
+        }
     }
 
     private String consultarAuto(int id){

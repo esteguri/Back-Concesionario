@@ -154,6 +154,37 @@ public class Auto {
         return null;
     }
 
+    public boolean consultarXPlaca(){
+        String SELECT = "SELECT * FROM `auto` WHERE `placa`= '"+this.placa+"'";
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(SELECT);
+        if (oConexion.ejecutarConsulta()){
+            try{
+                ResultSet rs = oConexion.getoResultSet();
+                if (rs.next()){
+                    this.id = rs.getInt(1);
+                    this.nombre = rs.getString(2);
+                    this.descripcion = rs.getString(3);
+                    this.precio = rs.getInt(4);
+                    this.placa = rs.getString(5);
+                    this.fecha_ingreso = rs.getString(6);
+                    this.marca = rs.getString(7);
+                    this.id_empleado = rs.getInt(8);
+                    oConexion.desconectar();
+                    return true;
+                }else{
+                    oConexion.desconectar();
+                    return false;
+                }
+            }catch(Exception e){
+                oConexion.desconectar();
+                System.out.println("ERROR " + e.getMessage());
+                return false;
+            }
+        }
+        return false;
+    }
+
     public boolean consultar(){
         String SELECT = "SELECT * FROM `auto` WHERE `id`= "+this.id;
         Conexion oConexion = new Conexion();
@@ -195,6 +226,13 @@ public class Auto {
         String UPDATE= "UPDATE auto SET `nombre`='"+this.nombre+"',`descripcion`='"+this.descripcion+"',`precio`= "+this.precio+", `placa` = '"+this.placa+"', `fecha_ingreso`='"+this.fecha_ingreso+"', `marca`='"+this.marca+"', `id_empleado`="+this.id_empleado+" WHERE `id`="+this.id;
         Conexion oConexion = new Conexion();
         oConexion.setSQL(UPDATE);
+        return oConexion.ejecutarSentencia();
+    }
+
+    public boolean eliminar(){
+        String DELETE= "DELETE FROM auto WHERE `id`="+this.id;
+        Conexion oConexion = new Conexion();
+        oConexion.setSQL(DELETE);
         return oConexion.ejecutarSentencia();
     }
 

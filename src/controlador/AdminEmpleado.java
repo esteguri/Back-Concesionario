@@ -16,8 +16,88 @@ import java.util.List;
 public class AdminEmpleado extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
 
+        String nombre, apellido, cedula, fecha_ingreso;
+        int id_sucursal;
+        try{
+            nombre = request.getParameter("nombre");
+            apellido = request.getParameter("apellido");
+            cedula = request.getParameter("cedula");
+            fecha_ingreso = request.getParameter("fecha_ingreso");
+            id_sucursal = Integer.parseInt(request.getParameter("id_sucursal"));
+
+        }catch(Exception e){
+            nombre = null;
+            apellido = null;
+            cedula = null;
+            fecha_ingreso = null;
+            id_sucursal = -1;
+        }
+
+        String json = "null";
+        response.setContentType("application/json");
+        if (nombre!=null && apellido!=null && cedula!=null && fecha_ingreso!=null && id_sucursal!=-1){
+            Empleado empleado = new Empleado();
+            empleado.setNombre(nombre);
+            empleado.setApellido(apellido);
+            empleado.setCedula(cedula);
+            empleado.setFecha_ingreso(fecha_ingreso);
+            empleado.setId_sucursal(id_sucursal);
+            if (empleado.insertar()){
+                json = "{\"error\":200,\"mensaje\":\"ok\",\"id\":"+empleado.getId()+"}";
+            }else{
+                json = "{\"error\":500,\"mensaje\":\"Error en la insercion\"}";
+            }
+        }else{
+            json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
+        }
+        PrintWriter out = response.getWriter();
+        out.println(json);
+
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        String nombre, apellido, cedula, fecha_ingreso;
+        int id_sucursal, id;
+        try{
+            id = Integer.parseInt(request.getParameter("id"));
+            nombre = request.getParameter("nombre");
+            apellido = request.getParameter("apellido");
+            cedula = request.getParameter("cedula");
+            fecha_ingreso = request.getParameter("fecha_ingreso");
+            id_sucursal = Integer.parseInt(request.getParameter("id_sucursal"));
+
+        }catch(Exception e){
+            id=-1;
+            nombre = null;
+            apellido = null;
+            cedula = null;
+            fecha_ingreso = null;
+            id_sucursal = -1;
+        }
+
+        String json = "null";
+        response.setContentType("application/json");
+        if (id!=-1 && nombre!=null && apellido!=null && cedula!=null && fecha_ingreso!=null && id_sucursal!=-1){
+            Empleado empleado = new Empleado();
+            empleado.setId(id);
+            empleado.setNombre(nombre);
+            empleado.setApellido(apellido);
+            empleado.setCedula(cedula);
+            empleado.setFecha_ingreso(fecha_ingreso);
+            empleado.setId_sucursal(id_sucursal);
+            if (empleado.actualizar()){
+                json = "{\"error\":200,\"mensaje\":\"ok\"}";
+            }else{
+                json = "{\"error\":500,\"mensaje\":\"Error en la actualizacion\"}";
+            }
+        }else{
+            json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
+        }
+        PrintWriter out = response.getWriter();
+        out.println(json);
     }
 
     @Override
@@ -62,11 +142,57 @@ public class AdminEmpleado extends HttpServlet {
                 id = -1;
             }
             json = consultarEmpleado(id);
+        }else if(search!=null && search.equals("cedula")){
+            String cedula;
+            try{
+                cedula = request.getParameter("cedula");
+            }catch(Exception e){
+                cedula = null;
+            }
+            json = consultarCedula(cedula);
         } else {
             json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
         }
         out.println(json);
     }
+
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        int id;
+        try{
+            id = Integer.parseInt(request.getParameter("id"));
+
+        }catch(Exception e){
+            id=-1;
+        }
+
+        String json = "null";
+        response.setContentType("application/json");
+        if (id!=-1){
+            Empleado empleado = new Empleado();
+            empleado.setId(id);
+            if (empleado.eliminar()){
+                json = "{\"error\":200,\"mensaje\":\"ok\"}";
+            }else{
+                json = "{\"error\":500,\"mensaje\":\"Error en la eliminacion\"}";
+            }
+        }else{
+            json = "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
+        }
+        PrintWriter out = response.getWriter();
+        out.println(json);
+    }
+
+    private String consultarCedula(String cedula){
+        Empleado empleado = new Empleado();
+        empleado.setCedula(cedula);
+        if (empleado.consultarCedula()){
+            return new Gson().toJson(empleado);
+        }else{
+            return "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
+        }
+    }
+
 
     private String consultarEmpleado(int id){
         Empleado empleado = new Empleado();
@@ -118,6 +244,5 @@ public class AdminEmpleado extends HttpServlet {
             return "{\"error\":500,\"mensaje\":\"Error en la peticion\"}";
         }
     }
-
 
 }
