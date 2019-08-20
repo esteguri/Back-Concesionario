@@ -52,7 +52,7 @@ module.exports = "<div class=\"pos-f-t\">\r\n    <div class=\"collapse\" id=\"na
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div><div class=\"d-flex justify-content-center\"><div class=\"m-2 mt-3 col-lg-5 col-md-12 animated fadeIn faster\">\r\n    <h1>Auto <small>{{title}}</small></h1>\r\n    <hr>\r\n    <div class=\"row text-right animated fadeIn faster\">\r\n        <div class=\"col\">\r\n            <button class=\"btn btn-outline-danger\" routerLink=\"/autos\">\r\n                <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\r\n                Regresar\r\n            </button>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"row animated fadeIn faster\">\r\n        <div class=\"col\">\r\n            <form (ngSubmit)=\"guardar(f)\" #f=\"ngForm\">\r\n                <div class=\"form-group\">\r\n                    <label>Auto ID</label>\r\n                    <input type=\"text\" [(ngModel)]=\"auto.id\" name=\"id\" placeholder=\"Auto ID\" class=\"form-control\" disabled>\r\n                    <small class=\"form-text text-muted\">Este campo es autogenerado</small>\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Nombre</label>\r\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.nombre\" name=\"nombre\" placeholder=\"Nombre del auto\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Descripcion</label>\r\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.descripcion\" name=\"descripcion\" placeholder=\"Agregar descripcion\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Precio</label>\r\n                    <input required type=\"number\" class=\"form-control\" maxlength=\"10\" [(ngModel)]=\"auto.precio\" name=\"precio\" placeholder=\"Precio del Auto\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Placa</label>\r\n                    <input required type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.placa\" minlength=\"6\" maxlength=\"6\"  name=\"placa\" placeholder=\"Placa del Vehiculo\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Fecha de Ingreso</label>\r\n                    <input required type=\"date\" class=\"form-control\" id=\"fecha\" [(ngModel)]=\"auto.fecha_ingreso\" name=\"fecha_ingreso\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Marca</label>\r\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.marca\" name=\"marca\" placeholder=\"Marca del auto\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Empleado que registra</label>\r\n                    <select name=\"empleado\" required class=\"form-control\" id=\"empleado\" #select [(ngModel)]=\"auto.id_empleado\">\r\n                        <option *ngFor=\"let empleado of empleados\" [value]=\"empleado.id\">{{empleado.nombre}} {{empleado.apellido}}</option>\r\n                        <!-- <option *ngFor=\"let empleado of empleados\" [value]=\"empleado.id\" >{{empleado.first_name}} {{empleado.last_name}}</option> -->\r\n                            \r\n                    </select>\r\n                </div>\r\n                <hr>\r\n                <div class=\"form-group text-center\">\r\n                    <button type=\"submit\" class=\"btn btn-info w-25\">\r\n                        <i class=\"fa fa-save\"></i>\r\n                        Guardar\r\n                    </button>\r\n                </div>\r\n                \r\n            </form>\r\n    </div>\r\n    \r\n    \r\n</div>\r\n</div>\r\n</div>"
+module.exports = "<div><div class=\"d-flex justify-content-center\"><div class=\"m-2 mt-3 col-lg-5 col-md-12 animated fadeIn faster\">\r\n    <h1>Auto <small>{{title}}</small></h1>\r\n    <hr>\r\n    <div class=\"row text-right animated fadeIn faster\">\r\n        <div class=\"col\">\r\n            <button class=\"btn btn-outline-danger\" routerLink=\"/autos\">\r\n                <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\r\n                Regresar\r\n            </button>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"row animated fadeIn faster\">\r\n        <div class=\"col\">\r\n            <form (ngSubmit)=\"guardar(f)\" #f=\"ngForm\">\r\n                <div class=\"form-group\">\r\n                    <label>Auto ID</label>\r\n                    <input type=\"text\" [(ngModel)]=\"auto.id\" name=\"id\" placeholder=\"Auto ID\" class=\"form-control\" disabled>\r\n                    <small class=\"form-text text-muted\">Este campo es autogenerado</small>\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Nombre</label>\r\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.nombre\" name=\"nombre\" placeholder=\"Nombre del auto\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Descripcion</label>\r\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.descripcion\" name=\"descripcion\" placeholder=\"Agregar descripcion\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Precio</label>\r\n                    <input required type=\"number\" class=\"form-control\" maxlength=\"10\" [(ngModel)]=\"auto.precio\" name=\"precio\" placeholder=\"Precio del Auto\">\r\n                </div>\r\n                <div class=\"form-group\" *ngIf=\"title == 'Nuevo' \">\r\n                    <label>Placa</label>\r\n                    <input required type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.placa\" minlength=\"6\" maxlength=\"6\"  name=\"placa\" placeholder=\"Placa del Vehiculo\">\r\n                </div>\r\n                <div class=\"form-group\" *ngIf=\"title != 'Nuevo' \">\r\n                    <label>Placa</label>\r\n                    <input required type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.placa\" minlength=\"6\" maxlength=\"6\"  name=\"placa\" placeholder=\"Placa del Vehiculo\" disabled>\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Fecha de Ingreso</label>\r\n                    <input required type=\"date\" class=\"form-control\" id=\"fecha\" [(ngModel)]=\"auto.fecha_ingreso\" name=\"fecha_ingreso\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Marca</label>\r\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"auto.marca\" name=\"marca\" placeholder=\"Marca del auto\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                    <label>Empleado que registra</label>\r\n                    <select name=\"empleado\" required class=\"form-control\" id=\"empleado\" #select [(ngModel)]=\"auto.id_empleado\">\r\n                        <option *ngFor=\"let empleado of empleados\" [value]=\"empleado.id\">{{empleado.nombre}} {{empleado.apellido}}</option>                            \r\n                    </select>\r\n                </div>\r\n                <hr>\r\n                <div class=\"form-group text-center\">\r\n                    <button type=\"submit\" class=\"btn btn-info w-25\">\r\n                        <i class=\"fa fa-save\"></i>\r\n                        Guardar\r\n                    </button>\r\n                </div>\r\n                \r\n            </form>\r\n    </div>\r\n    \r\n    \r\n</div>\r\n</div>\r\n</div>"
 
 /***/ }),
 
@@ -85,7 +85,7 @@ module.exports = "<div class=\"m-2 mt-3\">\r\n<h1>Gestion de Autos</h1>\r\n<hr>\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div><div class=\"d-flex justify-content-center\"><div class=\"m-2 mt-3 col-lg-5 col-md-12 animated fadeIn slow\">\n    <h1>Empleado <small>{{title}}</small></h1>\n    <hr>\n    <div class=\"row text-right animated fadeIn faster\">\n        <div class=\"col\">\n            <button class=\"btn btn-outline-danger\" routerLink=\"/empleados\">\n                <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\n                Regresar\n            </button>\n        </div>\n    </div>\n    \n    <div class=\"row animated fadeIn faster\">\n        <div class=\"col\">\n            <form (ngSubmit)=\"guardar(f)\" #f=\"ngForm\">\n                <div class=\"form-group\">\n                    <label>Empleado ID</label>\n                    <input type=\"text\" [(ngModel)]=\"empleado.id\" name=\"id\" placeholder=\"Empleado ID\" class=\"form-control\" disabled>\n                    <small class=\"form-text text-muted\">Este campo es autogenerado</small>\n                </div>\n                <div class=\"form-group\">\n                    <label>Nombre</label>\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"empleado.nombre\" name=\"nombre\" placeholder=\"Nombre del empleado\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Apellido</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"empleado.apellido\" name=\"apellido\" placeholder=\"Apellido del empleado\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Cedula</label>\n                    <input required type=\"number\" class=\"form-control\" maxlength=\"10\" [(ngModel)]=\"empleado.cedula\" name=\"cedula\" placeholder=\"Cedula del empleado\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Fecha de Ingreso</label>\n                    <input required type=\"date\" class=\"form-control\" id=\"fecha\" [(ngModel)]=\"empleado.fecha_ingreso\" name=\"fecha_ingreso\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Sucursal</label>\n                    <select required name=\"sucursal\" class=\"form-control\" id=\"sucursal\" #select [(ngModel)]=\"empleado.id_sucursal\">\n                        <option *ngFor=\"let sucursal of sucursales\" [value]=\"sucursal.id\">{{sucursal.nombre}}</option>\n                            \n                    </select>\n                </div>\n                <hr>\n                <div class=\"form-group text-center\">\n                    <button type=\"submit\" class=\"btn btn-info w-25\">\n                        <i class=\"fa fa-save\"></i>\n                        Guardar\n                    </button>\n                </div>\n                \n            </form>\n    </div>\n    \n    \n</div>\n</div>\n</div>\n\n"
+module.exports = "<div><div class=\"d-flex justify-content-center\"><div class=\"m-2 mt-3 col-lg-5 col-md-12 animated fadeIn slow\">\n    <h1>Empleado <small>{{title}}</small></h1>\n    <hr>\n    <div class=\"row text-right animated fadeIn faster\">\n        <div class=\"col\">\n            <button class=\"btn btn-outline-danger\" routerLink=\"/empleados\">\n                <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\n                Regresar\n            </button>\n        </div>\n    </div>\n    \n    <div class=\"row animated fadeIn faster\">\n        <div class=\"col\">\n            <form (ngSubmit)=\"guardar(f)\" #f=\"ngForm\">\n                <div class=\"form-group\">\n                    <label>Empleado ID</label>\n                    <input type=\"text\" [(ngModel)]=\"empleado.id\" name=\"id\" placeholder=\"Empleado ID\" class=\"form-control\" disabled>\n                    <small class=\"form-text text-muted\">Este campo es autogenerado</small>\n                </div>\n                <div class=\"form-group\">\n                    <label>Nombre</label>\n                    <input required minlength=\"3\" type=\"text\" class=\"form-control\" [(ngModel)]=\"empleado.nombre\" name=\"nombre\" placeholder=\"Nombre del empleado\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Apellido</label>\n                    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"empleado.apellido\" name=\"apellido\" placeholder=\"Apellido del empleado\">\n                </div>\n                <div class=\"form-group\" *ngIf=\"title == 'Nuevo'\" >\n                    <label>Cedula</label>\n                    <input required type=\"number\" class=\"form-control\" minlength=\"6\" maxlength=\"10\" [(ngModel)]=\"empleado.cedula\" name=\"cedula\" placeholder=\"Cedula del empleado\">\n                </div>\n                <div class=\"form-group\" *ngIf=\"title != 'Nuevo'\">\n                    <label>Cedula</label>\n                    <input required disabled type=\"number\" class=\"form-control\" minlength=\"6\" maxlength=\"10\" [(ngModel)]=\"empleado.cedula\" name=\"cedula\" placeholder=\"Cedula del empleado\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Fecha de Ingreso</label>\n                    <input required type=\"date\" class=\"form-control\" id=\"fecha\" [(ngModel)]=\"empleado.fecha_ingreso\" name=\"fecha_ingreso\">\n                </div>\n                <div class=\"form-group\">\n                    <label>Sucursal</label>\n                    <select required name=\"sucursal\" class=\"form-control\" id=\"sucursal\" #select [(ngModel)]=\"empleado.id_sucursal\">\n                        <option *ngFor=\"let sucursal of sucursales\" [value]=\"sucursal.id\">{{sucursal.nombre}}</option>\n                            \n                    </select>\n                </div>\n                <hr>\n                <div class=\"form-group text-center\">\n                    <button type=\"submit\" class=\"btn btn-info w-25\">\n                        <i class=\"fa fa-save\"></i>\n                        Guardar\n                    </button>\n                </div>\n                \n            </form>\n    </div>\n    \n    \n</div>\n</div>\n</div>\n\n"
 
 /***/ }),
 
@@ -441,20 +441,39 @@ var AutoComponent = /** @class */ (function () {
             });
             return;
         }
+        if (this.auto.precio.toString().length > 10) {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
+                title: "Oops...",
+                text: 'Verifique el precio, debe ser un valor valido de un auto',
+                type: 'error'
+            });
+            return;
+        }
         if (!this.auto.id) {
-            this.apiConcesionario.insertarAuto(this.auto).subscribe(function (response) {
+            this.apiConcesionario.consultarAutoXPlaca(this.auto.placa).subscribe(function (response) {
                 console.log(response);
-                if (response.error == "200") {
-                    sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
-                        title: _this.auto.marca + ' ' + _this.auto.nombre,
-                        text: 'Se inserto el auto correctamente',
-                        type: 'success'
+                if (response.error == "500") {
+                    _this.apiConcesionario.insertarAuto(_this.auto).subscribe(function (response) {
+                        if (response.error == "200") {
+                            sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
+                                title: _this.auto.marca + ' ' + _this.auto.nombre,
+                                text: 'Se inserto el auto correctamente',
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
+                                title: "Oops...",
+                                text: 'Ocurrio un error al insertar, verifique que la placa no exista',
+                                type: 'error'
+                            });
+                        }
                     });
                 }
                 else {
                     sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
                         title: "Oops...",
-                        text: 'Ocurrio un error al insertar',
+                        text: 'La placa ya existe',
                         type: 'error'
                     });
                 }
@@ -472,7 +491,7 @@ var AutoComponent = /** @class */ (function () {
                 else {
                     sweetalert2__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
                         title: "Oops...",
-                        text: 'Ocurrio un error al actualizar',
+                        text: 'Ocurrio un error al actualizar, verifique que el precio sea valido o la placa no exista',
                         type: 'error'
                     });
                 }
@@ -870,19 +889,38 @@ var EmpleadoComponent = /** @class */ (function () {
             });
             return;
         }
+        if (this.empleado.cedula.toString().length < 5 || this.empleado.cedula.toString().length > 10) {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+                title: "Oops...",
+                text: 'Verifique la cedula, debe ser valida',
+                type: 'error'
+            });
+            return;
+        }
         if (!this.empleado.id) {
-            this.apiConcesionario.insertarEmpleado(this.empleado).subscribe(function (response) {
-                if (response.error == "200") {
-                    sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
-                        title: _this.empleado.nombre + ' ' + _this.empleado.apellido,
-                        text: 'Se inserto el empleado correctamente',
-                        type: 'success'
+            this.apiConcesionario.consultarEmpleadoXCedula(this.empleado.cedula).subscribe(function (response) {
+                if (response.error == "500") {
+                    _this.apiConcesionario.insertarEmpleado(_this.empleado).subscribe(function (response) {
+                        if (response.error == "200") {
+                            sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+                                title: _this.empleado.nombre + ' ' + _this.empleado.apellido,
+                                text: 'Se inserto el empleado correctamente',
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+                                title: "Oops...",
+                                text: 'Ocurrio un error al insertar',
+                                type: 'error'
+                            });
+                        }
                     });
                 }
                 else {
                     sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
                         title: "Oops...",
-                        text: 'Ocurrio un error al insertar',
+                        text: 'La cedula ya existe',
                         type: 'error'
                     });
                 }
